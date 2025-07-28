@@ -24,4 +24,15 @@ python main.py
 
 ## Notes
 - The model uses both visual and semantic features for robust heading classification.
-- Make sure your JSON annotations match the expected format (see code for details). 
+- Make sure your JSON annotations match the expected format (see code for details).
+
+ 
+## HOW TO RUN 
+# Build the image
+docker build -t pdf-heading-classifier .
+
+# Run with interactive mode
+docker run -it pdf-heading-classifier
+
+# Run specific scripts
+docker run -it pdf-heading-classifier python predict_pdf_headings.py
